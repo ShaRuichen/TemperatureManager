@@ -41,7 +41,7 @@ namespace Sensor.Test
 
         public int Port => throw new System.NotImplementedException();
         public IPAddress RemoteAddress => throw new System.NotImplementedException();
-        public void Disconnect() => throw new System.NotImplementedException();
+        public void Disconnect() {}
         public void Exit() => throw new System.NotImplementedException();
     }
 }
