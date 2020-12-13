@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Sensor</RootNamespace>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sensor.Interface\Sensor.Interface.csproj" />
+    <ProjectReference Include="..\Sensor.Logic\Sensor.Logic.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\Shared\Shared.projitems" Label="Shared" />
+
+</Project>

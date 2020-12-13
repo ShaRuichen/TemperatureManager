@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Manager</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Manager.Algorithm\Manager.Algorithm.csproj" />
+    <ProjectReference Include="..\Manager.Interface\Manager.Interface.csproj" />
+  </ItemGroup>
+
+</Project>
