@@ -17,7 +17,7 @@
         /// </summary>
         public void OnConnected()
         {
-
+            program.ExecuteJs("setContent('已建立连接')");
         }
 
         /// <summary>
@@ -34,6 +34,19 @@
         /// <param name="data">远程主机发送的数据</param>
         public void OnReceived(dynamic data)
         {
+            string D = data;
+            string year = D.Substring(0, 3);
+            string month = D.Substring(4, 5);
+            string day = D.Substring(6,7);
+            string hour = D.Substring(8,9);
+            string minute = D.Substring(10, 11);
+            int temp = Convert.ToInt32(D.Substring(13, 14));
+            string Bool = D.Substring(12, 12);
+            if (Bool == "-")
+            {
+                temp = 0 - temp;
+            }
+            Sql.Execute("INSERT INTO data(year,month,day,hour,minute,temperature)  VALUES(@0,@1,@2,@3,@4,@5)",year, month, day, hour, minute, temp);
             program.ExecuteJs($"setContent('{data}')");
         }
     }
